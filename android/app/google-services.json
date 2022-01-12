@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "263163423916",
+    "project_id": "suqapp-11253",
+    "storage_bucket": "suqapp-11253.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:263163423916:android:74afb767c914c8c4ad4309",
+        "android_client_info": {
+          "package_name": "com.example.zenbil_two"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "263163423916-n70q9meennvag9hc9btft6dho4nk49ij.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsKJjuaTTw0dHtHLvheWv_-pve7Hcd8MI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "263163423916-n70q9meennvag9hc9btft6dho4nk49ij.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
