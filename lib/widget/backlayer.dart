@@ -105,7 +105,7 @@ class BackLayerMenu extends StatelessWidget {
                           borderRadius: BorderRadius.circular(20.0),
                           image: DecorationImage(
                             image: NetworkImage(
-                                'https://cdn1.vectorstock.com/i/thumb-large/62/60/default-avatar-photo-placeholder-profile-image-vector-21666260.jpg'),
+                                'https://firebasestorage.googleapis.com/v0/b/suqapp-11253.appspot.com/o/logos%2Flogo.png?alt=media&token=281af1f4-5ccb-463f-b028-99f28146d47b'),
                             fit: BoxFit.fill,
                           )),
                     ),

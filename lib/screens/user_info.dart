@@ -1,6 +1,3 @@
-import 'dart:io';
-
-import 'package:image_picker/image_picker.dart';
 import 'package:zenbil_two/consts/colors.dart';
 import 'package:zenbil_two/consts/my_icons.dart';
 import 'package:zenbil_two/provider/dark_theme_provider.dart';
@@ -55,7 +52,7 @@ class _UserInfoState extends State<UserInfo> {
       setState(() {
         _name = userDoc.get('name');
         _email = user.email;
-        _joinedAt = userDoc.get('JoinedAt');
+        _joinedAt = userDoc.get('joinedAt');
         _phoneNumber = userDoc.get('phoneNumber');
         _userImageUrl = userDoc.get('imageUrl');
       });
@@ -165,15 +162,7 @@ class _UserInfoState extends State<UserInfo> {
                         child: ListTile(
                           title: Text('Wishlist'),
                           trailing: Icon(Icons.chevron_right_rounded),
-                          leading: CircleAvatar(
-                            radius: 15,
-                            backgroundColor: Colors.white,
-                            child: CircleAvatar(
-                              radius: 13,
-                              backgroundImage:
-                                  AssetImage('assets/images/wishlist.jpg'),
-                            ),
-                          ),
+                          leading: Icon(MyAppIcons.wishlist),
                         ),
                       ),
                     ),
@@ -183,38 +172,23 @@ class _UserInfoState extends State<UserInfo> {
                       },
                       title: Text('Cart'),
                       trailing: Icon(Icons.chevron_right_rounded),
-                      leading: CircleAvatar(
-                        radius: 15,
-                        backgroundColor: Colors.white,
-                        child: CircleAvatar(
-                          radius: 13,
-                          backgroundImage: AssetImage('assets/images/cart.png'),
-                        ),
-                      ),
+                      leading: Icon(MyAppIcons.cart),
                     ),
                     ListTile(
                       onTap: () => Navigator.of(context)
                           .pushNamed(OrderScreen.routeName),
                       title: Text('My Orders'),
                       trailing: Icon(Icons.chevron_right_rounded),
-                      leading: CircleAvatar(
-                        radius: 15,
-                        backgroundColor: Colors.white,
-                        child: CircleAvatar(
-                          radius: 13,
-                          backgroundImage:
-                              AssetImage('assets/images/orders.png'),
-                        ),
-                      ),
+                      leading: Icon(MyAppIcons.bag),
                     ),
-                    /*Padding(
+                    Padding(
                       padding: const EdgeInsets.only(left: 8.0),
-                      child: userTitle(title: 'User Information'),
+                      child: userTitle(title: 'User Info'),
                     ),
                     Divider(
                       thickness: 1,
                       color: Colors.grey,
-                    ),*/
+                    ),
                     userListTile('Email', _email ?? '', 0, context),
                     userListTile('Phone number', _phoneNumber.toString() ?? '',
                         1, context),
@@ -339,14 +313,12 @@ class _UserInfoState extends State<UserInfo> {
       child: Transform(
         transform: Matrix4.identity()..scale(scale),
         alignment: Alignment.center,
-        child: FloatingActionButton(
-          backgroundColor: Colors.orange,
+        /*child: FloatingActionButton(
+          backgroundColor: Colors.orangeAccent,
           heroTag: "btn1",
-          onPressed: () {
-            PickedFile('');
-          },
+          onPressed: () {},
           child: Icon(Icons.camera_alt_outlined),
-        ),
+        ),*/
       ),
     );
   }

@@ -48,11 +48,8 @@ class _HomeState extends State<Home> {
         frontLayerBackgroundColor: Theme.of(context).scaffoldBackgroundColor,
         headerHeight: MediaQuery.of(context).size.height * 0.25,
         appBar: BackdropAppBar(
-          title: Text(
-            "Home",
-            textAlign: TextAlign.center,
-          ),
-          //leading: BackdropToggleButton(icon: AnimatedIcons.home_menu),
+          title: Text("Home"),
+          leading: BackdropToggleButton(icon: AnimatedIcons.home_menu),
           flexibleSpace: Container(
             decoration: BoxDecoration(
                 gradient: LinearGradient(colors: [
@@ -60,7 +57,7 @@ class _HomeState extends State<Home> {
               ColorsConsts.endColor
             ])),
           ),
-          /* actions: <Widget>[
+          actions: <Widget>[
             IconButton(
               iconSize: 15,
               padding: const EdgeInsets.all(10),
@@ -70,12 +67,12 @@ class _HomeState extends State<Home> {
                 child: CircleAvatar(
                   radius: 13,
                   backgroundImage: NetworkImage(
-                      'https://cdn1.vectorstock.com/i/thumb-large/62/60/default-avatar-photo-placeholder-profile-image-vector-21666260.jpg'),
+                      'https://firebasestorage.googleapis.com/v0/b/suqapp-11253.appspot.com/o/logos%2Flogo.png?alt=media&token=281af1f4-5ccb-463f-b028-99f28146d47b'),
                 ),
               ),
               onPressed: () {},
             )
-          ],*/
+          ],
         ),
         backLayer: BackLayerMenu(),
         frontLayer: SingleChildScrollView(
@@ -86,12 +83,12 @@ class _HomeState extends State<Home> {
                 height: 190.0,
                 width: double.infinity,
                 child: Carousel(
-                  boxFit: BoxFit.cover,
+                  boxFit: BoxFit.fill,
                   autoplay: true,
                   animationCurve: Curves.fastOutSlowIn,
                   animationDuration: Duration(milliseconds: 1000),
                   dotSize: 5.0,
-                  dotIncreasedColor: Colors.orange,
+                  dotIncreasedColor: Colors.purple,
                   dotBgColor: Colors.black.withOpacity(0.2),
                   dotPosition: DotPosition.bottomCenter,
                   showIndicator: true,
@@ -177,7 +174,7 @@ class _HomeState extends State<Home> {
                         color: Colors.blueGrey,
                         child: Image.asset(
                           _brandImages[index],
-                          fit: BoxFit.cover,
+                          fit: BoxFit.fill,
                         ),
                       ),
                     );
