@@ -107,7 +107,8 @@ void main() {
       // usename null
       var textField = find.byType(TextField);
       expect(textField, findsOneWidget);
-      await tester.enterText(textField, 'name ');
+      expect(find.text('Email Address'), findsOneWidget);
+      await tester.enterText(textField, ' ');
       var button = find.byType(ButtonBar);
       expect(button, findsOneWidget);
       expect(find.text('SignUp'), findsOneWidget);

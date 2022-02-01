@@ -10,6 +10,7 @@ void main() {
     var textField = find.byType(TextField);
     expect(textField, findsOneWidget);
     expect(find.text('Email Address'), findsOneWidget);
+    await tester.enterText(textField, 'abebe@gmail.com');
     var button = find.byType(ButtonBar);
     expect(button, findsOneWidget);
     expect(find.text('Login'), findsOneWidget);
